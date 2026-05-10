@@ -1,0 +1,9 @@
+[filnamn]/[funktion]/[rad]
+
+LibrarySystem AddBook ln 29 || Never Checked if book with the same ISBN existed inside the list || fixed with a if stament to check if isbn already exist
+
+LibrarySystem RemoveBook ln 64 || Never checks if book is loaned || fix added a if statment to check if Isborrowed true
+
+LibrarySystem SearchTitle ln 54 || Didnt have a string comparison || fix added a sting comparison to ignore case sensitivity
+
+LibrarySystem BorrowBook ln 76 || nothing to reset the books borrow date after return || fix made it null when returning
