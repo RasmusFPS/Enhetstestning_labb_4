@@ -123,6 +123,18 @@ namespace Test
             Assert.IsTrue(CheckDate);
         }
 
+        [TestMethod]
+        public void CalculateLateFee_ShouldReturnCorrectFee( )
+        {
+            var book = new Book("test", "Author", "1234567", 1234);
+            _libsys.AddBook(book);
+
+            decimal actual = _libsys.CalculateLateFee("1234567", 10);
+            decimal expected = 5m;
+
+            Assert.AreEqual(expected, actual);
+        }
+
 
     }
 }

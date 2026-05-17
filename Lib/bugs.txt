@@ -2,8 +2,14 @@
 
 LibrarySystem AddBook ln 29 || Never Checked if book with the same ISBN existed inside the list || fixed with a if stament to check if isbn already exist
 
+LibrarySystem AddBook ln 29 || Never checked if book hade a isbn || fix Added a if statment to check if the isbn string is empty
+
 LibrarySystem RemoveBook ln 64 || Never checks if book is loaned || fix added a if statment to check if Isborrowed true
 
 LibrarySystem SearchTitle ln 54 || Didnt have a string comparison || fix added a sting comparison to ignore case sensitivity
 
+LibrarySystem SearchTitle ln 54 || Didnt have .Contained() to so we could never find Part matches || fix was to add .Containe
+
 LibrarySystem BorrowBook ln 76 || nothing to reset the books borrow date after return || fix made it null when returning
+
+LibrarySystem CalculateLateFee ln 93 || The late fee was calculated with + instead of * || fix changed the calculation from addition to multiplication
