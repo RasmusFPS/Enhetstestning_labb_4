@@ -16,6 +16,14 @@ namespace Test
         }
 
         [TestMethod]
+        public void AddBookWithoutISBN_ShouldReturnFalse_BookShouldntBeAdded()
+        {
+            var BookWithoutISBN = new Book("test", "noISBN", "", 3026);
+            var expected = _libsys.AddBook(BookWithoutISBN);
+            Assert.IsFalse(expected);
+        }
+
+        [TestMethod]
         [DataRow("Book 1", "auther 1", "9781234567897",1992)]
         [DataRow("Book 2", "auther 2", "9780123456786",1993)]
         [DataRow("Book 3", "auther 3", "9780123256786",1933)]
@@ -115,7 +123,6 @@ namespace Test
             Assert.IsTrue(CheckDate);
         }
 
-        [TestMethod]
-        public void 
+
     }
 }

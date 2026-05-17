@@ -26,7 +26,7 @@ namespace Lib
 
         public bool AddBook(Book book)
         {
-            if(SearchByISBN(book.ISBN) != null)
+            if(SearchByISBN(book.ISBN) != null || book.ISBN == "")
             {
                 return false;
             }
