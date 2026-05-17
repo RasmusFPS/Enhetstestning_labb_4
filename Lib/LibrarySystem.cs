@@ -100,7 +100,7 @@ namespace Lib
                 return 0;
 
             decimal feePerDay = 0.5m;
-            return daysLate + feePerDay;
+            return daysLate * feePerDay;
         }
 
         public bool IsBookOverdue(string isbn, int loanPeriodDays)
